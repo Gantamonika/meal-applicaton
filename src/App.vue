@@ -1,12 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  
+  <div>
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link :to="{path: '/Search/:idMeal'}">Search</router-link></li>
+      <li><router-link :to="{path: '/RandomMeal'}">RandomMeal</router-link></li>
+
+    </ul>
+    <hr>
+    <router-view/>
+   
+  </div>
 </template>
 
 <script>
 
+
 export default {
+ 
   name: 'App',
+  
  
 }
 </script>
