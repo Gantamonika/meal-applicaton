@@ -1,7 +1,7 @@
 <template>
     <div>    
         <div>
-              <button class="btn" @click="getList">Get Meal</button>
+              <button class="btn" @click="getList">Categories Available</button>
         </div>    
               <ul >
                 <li v-for="item in recipes" :key="item">
