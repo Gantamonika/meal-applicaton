@@ -4,15 +4,10 @@
             <input type="text" v-model="search" placeholder="Search Meal.."/>
             <button @click="getMeal">Search </button><br/>
             </div>
-    <div>
-
+           
+    <div>      
+      
        
-     <div>
-    
-        <div>
-           
-           
-            </div>
             <p class="item" v-for = "item in meals" v-bind:key="item.idMeal">
                  <table>
                  <th style="text-align:center"><img :src="item.strMealThumb" alt="Trulli" width="600" height="433" /></th>
@@ -44,19 +39,22 @@
             </table>
             </p>
     </div>
-    </div>
+    
+    
 </template>
 <script>
 import Axios from 'axios';
     export default {
         name: 'Search',
+      
         
         data(){
             return {
                 meals: [],
                 loading: false,
                 err: '',
-                strMeal:''
+                strMeal:'',
+               
             }
         },
         created() {

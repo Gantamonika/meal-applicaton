@@ -1,13 +1,25 @@
 <template>
-    <div>    
+    <div class='bg-colour'>    
         <div>
-              <button class="btn" @click="getList">Categories Available</button>
-        </div>    
-              <ul >
-                <li v-for="item in recipes" :key="item">
-                     {{ item.strCategory }} </li>
-                   
-            </ul>
+          <button class=" bttn" @click="getList">Categories Available</button>  
+          <button class="btn bttn" @click="getArea">Area</button>    
+        </div> 
+
+        <ul >
+          <li class="sie" v-for="item in recipes" :key="item">
+            {{ item.strCategory }}
+          </li>                  
+        </ul> 
+
+        <ul >
+          <li class="sie" v-for="areas in area" :key="areas">
+            {{ areas.strArea }}
+          </li>                  
+        </ul>  
+
+       
+           
+              
     </div>
   
 </template>
@@ -18,14 +30,14 @@ export default {
 
  data() {
     return {
-      meal: "",
+     
       recipes: '',
-      // youtubeVid: ""
+      area:'',
+      ingr:'',
+     
     };
   },
-//   created(){
-//     this.getList();
-//   },
+
   methods: {
     getList() {
       Axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
@@ -33,14 +45,43 @@ export default {
             console.log(response.data.meals);
           this.recipes = response.data.meals;
          
-          // this.youtubeVid = [data.body.meals[0].strYoutube];
-        });
+    });
     },
+    getArea() {
+      Axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
+        .then(response => {
+            console.log(response.data.meals);
+            this.area = response.data.meals;
+            });
+    },
+ 
+
   },
 
 
 };
 </script>
 <style>
-
+.bttn{
+   margin: 2%;
+  border: 2px solid black !important;
+  padding: 5px;
+  background-color: #ffe6e6 !important;
+  border-radius: 10px;
+}
+.bttn:hover{
+  background-color: white;
+  transition: 1s;
+  color: #ff4d88 !important;
+}
+.bg-colour{
+  /* background-color: #ffcccc; */
+  background-color: #fcfc03;
+  
+  margin-top: 9px;
+  text-align: center;
+}
+.sie{
+ font-size: 150%;
+}
 </style>
