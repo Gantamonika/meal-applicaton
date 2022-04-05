@@ -27,7 +27,7 @@
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li> -->
-      <li class="nav-item dropdown">
+      <li class="nav-item ">
         <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a> -->
@@ -67,13 +67,16 @@ export default {
 </script>
 
 <style>
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
+  font-size: 25px;
 }
 .button-class{
   margin: 2%;
@@ -81,6 +84,7 @@ export default {
   padding: 5px;
   background-color: #ffe6e6;
   border-radius: 10px;
+  font-size: 25px !important;
 
 }
 .button-class:hover{
@@ -89,11 +93,14 @@ export default {
   color: #ff4d88 !important;
 }
 .bg-purple{
-  background-color: #ffb3b3;
+  background-color: #e91e63;
   
 }
 .navbar{
   height: 70px;
+}
+.nav-item{
+  font-family: 'Brush Script MT', cursive !important;
 }
 
 
