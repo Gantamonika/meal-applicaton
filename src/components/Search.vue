@@ -17,7 +17,7 @@
     <div class="item" v-for="item in meals" v-bind:key="item.idMeal">
       <div class="car-mar">
         <div class="row blk">
-          <div class="row" style="margin-top: 5%">
+          <div class="row" style="margin-top: 3%">
             <div class="col-sm-6">
               <div class="Mcard-body">
                 <img
@@ -202,7 +202,7 @@ img {
 .blk {
   background-color: black;
   border-radius: 10px;
-  width: 100.5%;
+  width: 100.6%;
 }
 .Mcard-title {
   text-align: center;

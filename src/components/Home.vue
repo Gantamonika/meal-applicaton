@@ -227,9 +227,6 @@ b{
   text-align: left;
   
 }
-.btn{
-  margin-left:5%;
-}
 
 
 
