@@ -105,8 +105,8 @@ export default {
 <style>
 h1 {
     text-align: center;
-    color:gold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:gold !important;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     font: size 100%;
    
 }

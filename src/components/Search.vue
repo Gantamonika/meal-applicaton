@@ -44,6 +44,8 @@
                 <br />
               </div>
             </div>
+
+
             <div class="col-sm-3 d-flex">
               <div class="Mcard-body wd">
                 <h5 class="Mcard-title">
@@ -61,15 +63,8 @@
               </div>
             </div>
           </div>
-           <div class="row">
-            <div class="col-sm-12">
-              <div class="Mcard-body">
-                <h5 class="Mcard-title">
-                  <h5>{{ item.strInstructions }}</h5>
-                </h5>
-              </div>
-            </div>
-          </div>
+                      <iframe height="420" width="720" :src="'https://www.youtube.com/embed/' + this.youtubeVid"></iframe>
+
           <div class="row">
             <div class="col-sm-12">
               <div class="Mcard-body">
@@ -127,6 +122,7 @@ export default {
       loading: false,
       err: "",
       strMeal: "",
+      youtubeVid: "",
     };
   },
   created() {
@@ -142,6 +138,7 @@ export default {
         .then((response) => {
           console.log(response.data);
           this.meals = response.data.meals;
+          this.youtubeVid = this.meals[0].strYoutube.substring(32);
           this.loading = false;
         })
         .catch((err) => {
