@@ -1,0 +1,3 @@
+extends: <relative_path to .eslintrc>
+env:
+    jest: true

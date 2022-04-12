@@ -23,7 +23,7 @@
                 <img
                   :src="item.strMealThumb"
                   alt="Trulli"
-                  width="600"
+                  style="margin:auto"
                   height="433"
                 /><br />
                 <b>{{ item.strMeal }}</b>
@@ -57,6 +57,15 @@
                   <li>{{ item.strIngredient7 }}, {{ item.strMeasure7 }}</li>
                   <li>{{ item.strIngredient8 }}, {{ item.strMeasure8 }}</li>
                   <li>{{ item.strIngredient9 }}, {{ item.strMeasure9 }}</li>
+                </h5>
+              </div>
+            </div>
+          </div>
+           <div class="row">
+            <div class="col-sm-12">
+              <div class="Mcard-body">
+                <h5 class="Mcard-title">
+                  <h5>{{ item.strInstructions }}</h5>
                 </h5>
               </div>
             </div>

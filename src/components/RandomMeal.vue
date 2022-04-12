@@ -19,8 +19,9 @@
                 <img
                   :src="item.strMealThumb"
                   alt="Trulli"
-                  width="600"
+                  
                   height="433"
+                  style="margin:auto"
                 /><br />
                 <b>{{ item.strMeal }}</b>
               </div>
@@ -126,6 +127,7 @@ text-align: center;
   border-radius: 5px;
   
 }
+
 
 </style>
 
