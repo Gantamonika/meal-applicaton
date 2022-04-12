@@ -58,6 +58,8 @@
               </div>
             </div>
           </div>
+          <iframe height="420" width="100%" :src="'https://www.youtube.com/embed/' + this.youtubeVid"></iframe>
+
           <div class="row">
             <div class="col-sm-12">
               <div class="Mcard-body">
@@ -84,7 +86,7 @@ export default {
     return {
       meal: "",
       recipes: [],
-      // youtubeVid: ""
+     youtubeVid: "",
     };
   },
   methods: {
@@ -93,8 +95,8 @@ export default {
         .then(response => {
             console.log(response.data);
           this.recipes = [response.data.meals[0]];
-         
-          // this.youtubeVid = [data.body.meals[0].strYoutube];
+           this.youtubeVid = this.meals[0].strYoutube.substring(32);
+            this.loading = false;
         });
     },
   },

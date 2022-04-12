@@ -1,5 +1,6 @@
 <template>
-  <div class="search">
+
+  <div class="search" >
     <br />
     <!-- <input type="text" v-model="search" placeholder="Search Meal.."/> -->
     <input
@@ -8,9 +9,12 @@
       v-model="search"
       placeholder="Search Meal.."
     />
-    <button @click="getMeal">Search</button>
+    
+    <button @click="getMeal" >Search</button>
+     
     <br />
   </div>
+ 
   <br />
 
   <div>
@@ -110,6 +114,7 @@
             </table> -->
     </div>
   </div>
+
 </template>
 <script>
 import Axios from "axios";
