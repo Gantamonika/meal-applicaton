@@ -16,7 +16,7 @@
         {{ item.strCategory }}                 
       </ul>
     </div>
-     <v-layout row :class="{'isAct': isBlockAct, 'isNotAct': !isBlockAct}"></v-layout>
+    
     
   </div>
 </div>

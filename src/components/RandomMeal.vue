@@ -84,9 +84,10 @@ export default {
     name: 'RandomMeal',
   data() {
     return {
-      meal: "",
+      meals: "",
       recipes: [],
      youtubeVid: "",
+    
     };
   },
   methods: {
@@ -94,9 +95,10 @@ export default {
       Axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
         .then(response => {
             console.log(response.data);
-          this.recipes = [response.data.meals[0]];
-           this.youtubeVid = this.meals[0].strYoutube.substring(32);
+          this.recipes = response.data.meals;
+          this.youtubeVid = this.recipes[0].strYoutube.substring(32);
             this.loading = false;
+           
         });
     },
   },
@@ -132,7 +134,6 @@ text-align: center;
 
 
 </style>
-
 
 
 

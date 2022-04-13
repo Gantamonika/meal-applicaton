@@ -11,13 +11,15 @@
     />
     
     <button @click="getMeal" >Search</button>
+    
+    
      
     <br />
   </div>
  
   <br />
 
-  <div>
+  <div v-if="meals!==null">
     <div class="item" v-for="item in meals" v-bind:key="item.idMeal">
       <div class="car-mar">
         <div class="row blk">
@@ -67,7 +69,7 @@
               </div>
             </div>
           </div>
-                      <iframe height="420" width="720" :src="'https://www.youtube.com/embed/' + this.youtubeVid"></iframe>
+          <iframe height="420" width="720" :src="'https://www.youtube.com/embed/' + item.strYoutube.substring(32)"></iframe>
 
           <div class="row">
             <div class="col-sm-12">
@@ -83,37 +85,14 @@
           </div>
         </div>
       </div>
-
-      <!-- <table>
-                  <th style="text-align:center"><img :src="item.strMealThumb" alt="Trulli" width="600" height="433" /></th>
-                  <h2 align="center"><span style="font-weight:bold;">{{item.strMeal}}</span></h2>
-                <tr>
-                    <th>About</th>
-                    <th>Recipe</th>
-                    <th>Ingredients</th>
-                </tr>
-                <tr>
-                    <td style="padding-top: 5px;border-top-width: 2px;">
-                        <li>Meal Id:{{item.idMeal}}</li>
-                        <li>Name: {{item.strMeal}}</li>
-                        <li>Category: {{item.strCategory}}</li>
-                        <li>Location: {{item.strArea}}</li>
-                    </td>
-                    <td><li>{{item.strInstructions}}</li></td>
-                    <td> <li>{{item.strIngredient1}}, {{item.strMeasure1}}</li>
-                        <li>{{item.strIngredient2}}, {{item.strMeasure2}}</li>
-                        <li>{{item.strIngredient3}}, {{item.strMeasure3}}</li>
-                        <li>{{item.strIngredient4}}, {{item.strMeasure4}}</li>
-                        <li>{{item.strIngredient5}}, {{item.strMeasure5}}</li>
-                        <li>{{item.strIngredient6}}, {{item.strMeasure6}}</li>
-                        <li>{{item.strIngredient7}}, {{item.strMeasure7}}</li>
-                        <li>{{item.strIngredient8}}, {{item.strMeasure8}}</li>
-                        <li>{{item.strIngredient9}}, {{item.strMeasure9}}</li>
-                    </td>
-                </tr>
-            </table> -->
     </div>
   </div>
+
+  <div class="err" v-else>
+    <h1>  Oops..!!! <br/>
+      Recipe is not available, try for New one 
+    </h1>
+    </div>
 
 </template>
 <script>
@@ -127,14 +106,14 @@ export default {
       loading: false,
       err: "",
       strMeal: "",
-      youtubeVid: "",
+      youtubeVid: [],
+      searchClick:1,
     };
   },
-  created() {
-    this.getMeal();
-  },
+
   methods: {
     getMeal() {
+      this.searchClick--;
       this.loading = true;
       console.log(this.strMeal);
       Axios.get(
@@ -142,9 +121,9 @@ export default {
       )
         .then((response) => {
           console.log(response.data);
-          this.meals = response.data.meals;
-          this.youtubeVid = this.meals[0].strYoutube.substring(32);
+          this.meals = response.data.meals;  
           this.loading = false;
+
         })
         .catch((err) => {
           this.loading = false;
@@ -257,5 +236,7 @@ li {
   color: black;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: left;
+}.err{
+  transition-delay: 5ms !important;
 }
 </style>

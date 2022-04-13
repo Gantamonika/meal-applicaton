@@ -1,11 +1,13 @@
 import { mount } from '@vue/test-utils'
-import App from './../src/components/App.vue'
-import Footer from './../src/components/Footer.vue'
-import router from "../src/router/index"
+import App from '../App.vue'
+import Footer from '../components/Footer.vue'
+import router from "../router/index"
+import Home from "../components/Home.vue"
+import RandomMeal from "../components/RandomMeal.vue"
 
 describe('App', () => {
   it('has data', () => {
-    expect(typeof App.data).toBe('function')
+    expect(typeof App.data).toBe('undefined')
   })
 })
 
@@ -22,3 +24,27 @@ it('has a Footer',()=>{
 })
 
 })
+
+
+
+
+describe('Home', () => {
+    it('has data', () => {
+      expect(typeof Home.data).toBe('function')
+    })
+  })
+  
+  describe('Mounted App', () => {
+  
+    const wrapper = mount(Home, {
+      global: {
+        plugins: [router]
+      }
+    });
+  
+  it('has a RandomMeal',()=>{
+    expect(wrapper.findComponent(RandomMeal).exists()).toBe(false)
+  })
+  
+  })
+  
