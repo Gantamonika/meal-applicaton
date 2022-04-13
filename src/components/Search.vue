@@ -69,10 +69,11 @@
               </div>
             </div>
           </div>
-          <iframe height="420" width="720" :src="'https://www.youtube.com/embed/' + item.strYoutube.substring(32)"></iframe>
-
+          <div style="padding-right:40px " >
+          <iframe height="420" width="100%" :src="'https://www.youtube.com/embed/' + item.strYoutube.substring(32)"></iframe>
+          </div>
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="padding:4px">
               <div class="Mcard-body">
                 <h5 class="Mcard-title">
                   <b>Recipe</b>
@@ -135,8 +136,7 @@ export default {
 };
 </script>
 <style>
-table,
-th,
+
 td {
   border: 1px solid black;
   border-collapse: collapse;

@@ -59,10 +59,11 @@
             </div>
           </div>
           <iframe height="420" width="100%" :src="'https://www.youtube.com/embed/' + this.youtubeVid"></iframe>
+          
 
-          <div class="row">
+          <div class="row" >
             <div class="col-sm-12">
-              <div class="Mcard-body">
+              <div class="Mcard-body" >
                 <h5 class="Mcard-title">
                   <b>Recipe</b>
                   <br />

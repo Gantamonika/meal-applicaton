@@ -38,7 +38,7 @@
   <div class="container text-left text-md-center">
     <div class="row">
       <div class="col-md-2 mx-auto shfooter">
-        <router-link to="/" class="my-2 font-weight-bold d-none d-md-block" >Home</router-link> 
+        <router-link to="/" class="my-2 font-weight-bold d-none d-md-block si" >Home</router-link> 
         <div class="d-md-none title" data-target="#Home" data-toggle="collapse">
           <div class="mt-3 font-weight-bold">Home
             <div class="float-right navbar-toggler">
@@ -47,7 +47,19 @@
             </div>
           </div>
         </div>
-        <ul class="list-unstyled collapse" id="Home">
+      </div>
+
+      <div class="col-md-2 mx-auto shfooter">
+        <h4 class="my-2 font-weight-bold d-none d-md-block" style="color:black">About</h4>
+        <div class="d-md-none title" data-target="#About" data-toggle="collapse">
+          <div class="mt-3 font-weight-bold">About
+            <div class="float-right navbar-toggler">
+              <i class="fas fa-angle-down"></i>
+              <i class="fas fa-angle-up"></i>
+            </div>
+          </div>
+        </div>
+        <ul class="list-unstyled collapse" id="About">
           <li>About</li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Support</a></li>
@@ -55,65 +67,10 @@
           <li><a href="#">FAQ</a></li>
         </ul>
       </div>
-
-      <div class="col-md-2 mx-auto shfooter">
-        <h5 class="my-2 font-weight-bold d-none d-md-block">Product</h5>
-        <div class="d-md-none title" data-target="#Product" data-toggle="collapse">
-          <div class="mt-3 font-weight-bold">Product
-            <div class="float-right navbar-toggler">
-              <i class="fas fa-angle-down"></i>
-              <i class="fas fa-angle-up"></i>
-            </div>
-          </div>
-        </div>
-        <ul class="list-unstyled collapse" id="Product">
-          <li><a href="#">Create Websites</a></li>
-          <li><a href="#">Secure Cloud Hosting</a></li>
-          <li><a href="#">Engage Your Audience</a></li>
-          <li><a href="#">Website Support</a></li>
-        </ul>
-      </div>
+      
       <hr class="clearfix w-100 d-md-none mb-0">
       <div class="col-md-2 mx-auto shfooter">
-        <h5 class="my-2 font-weight-bold d-none d-md-block">Company</h5>
-        <div class="d-md-none title" data-target="#Company" data-toggle="collapse">
-          <div class="mt-3 font-weight-bold">Company
-            <div class="float-right navbar-toggler">
-              <i class="fas fa-angle-down"></i>
-              <i class="fas fa-angle-up"></i>
-            </div>
-          </div>
-        </div>
-        <ul class="list-unstyled collapse" id="Company">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      <hr class="clearfix w-100 d-md-none mb-0">
-      <div class="col-md-2 mx-auto shfooter">
-        <h5 class="my-2 font-weight-bold d-none d-md-block">Resources</h5>
-        <div class="d-md-none title" data-target="#Resources" data-toggle="collapse">
-          <div class="mt-3 font-weight-bold">Resources
-            <div class="float-right navbar-toggler">
-              <i class="fas fa-angle-down"></i>
-              <i class="fas fa-angle-up"></i>
-            </div>
-          </div>
-        </div>
-        <ul class="list-unstyled collapse" id="Resources">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">eBooks</a></li>
-          <li><a href="#">Whitepapers</a></li>
-          <li><a href="#">Comparison Guide</a></li>
-          <li><a href="#">Website Grader</a></li>
-        </ul>
-      </div>
-      <hr class="clearfix w-100 d-md-none mb-0">
-      <div class="col-md-2 mx-auto shfooter">
-        <h5 class="my-2 font-weight-bold d-none d-md-block">Get Help</h5>
+        <h4 class="my-2 font-weight-bold d-none d-md-block"  style="color:black">Get Help</h4>
         <div class="d-md-none title" data-target="#Get-Help" data-toggle="collapse">
           <div class="mt-3 font-weight-bold">Get Help
             <div class="float-right navbar-toggler">
@@ -142,34 +99,7 @@
   Resize screen
   <i class="fas fa-angle-double-right"></i></h5>
 
-    <!-- <div>
-        <footer class="text-center text-white" style="background-color: #45637d;">
-  <div class="container p-4">
-    <section class="">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9">
-            <iframe
-              class="shadow-1-strong rounded"
-              src="https://www.youtube.com/embed/vlDzYIIOYmM"
-              title="YouTube video"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
- 
 
-
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
- 
-</footer>
-    </div> -->
 </template>
 <style>
 a {
@@ -244,5 +174,11 @@ a {
 }
 .text-white{
   background-color: #e91e63 ;
+}
+h5{
+  font-size: 2px;
+}
+.si{
+  font-weight: 100%;
 }
 </style>
