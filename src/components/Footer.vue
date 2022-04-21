@@ -91,7 +91,7 @@
   </div>
   <hr class="mb-0">
   <div class="py-3 text-center">
-    Copyright
+    Copyright © 2022
   </div>
 </footer>
 <h5 class="resize">

@@ -91,7 +91,7 @@
 
   <div class="err" v-else>
     <h1>  Oops..!!! <br/>
-      Recipe is not available, try for New one 
+      Recipe is not available, try for New one.
     </h1>
     </div>
 

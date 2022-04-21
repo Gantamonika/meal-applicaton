@@ -4,6 +4,7 @@ import Footer from '../components/Footer.vue'
 import router from "../router/index"
 import Home from "../components/Home.vue"
 import RandomMeal from "../components/RandomMeal.vue"
+import Search from "../components/Search.vue"
 
 describe('App', () => {
   it('has data', () => {
@@ -44,6 +45,10 @@ describe('Home', () => {
   
   it('has a RandomMeal',()=>{
     expect(wrapper.findComponent(RandomMeal).exists()).toBe(false)
+  })
+
+  it('has a Search',()=>{
+    expect(wrapper.findComponent(Search).exists()).toBe(false)
   })
   
   })

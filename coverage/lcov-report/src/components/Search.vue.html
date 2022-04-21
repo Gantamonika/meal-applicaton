@@ -305,46 +305,7 @@
 <a name='L240'></a><a href='#L240'>240</a>
 <a name='L241'></a><a href='#L241'>241</a>
 <a name='L242'></a><a href='#L242'>242</a>
-<a name='L243'></a><a href='#L243'>243</a>
-<a name='L244'></a><a href='#L244'>244</a>
-<a name='L245'></a><a href='#L245'>245</a>
-<a name='L246'></a><a href='#L246'>246</a>
-<a name='L247'></a><a href='#L247'>247</a>
-<a name='L248'></a><a href='#L248'>248</a>
-<a name='L249'></a><a href='#L249'>249</a>
-<a name='L250'></a><a href='#L250'>250</a>
-<a name='L251'></a><a href='#L251'>251</a>
-<a name='L252'></a><a href='#L252'>252</a>
-<a name='L253'></a><a href='#L253'>253</a>
-<a name='L254'></a><a href='#L254'>254</a>
-<a name='L255'></a><a href='#L255'>255</a>
-<a name='L256'></a><a href='#L256'>256</a>
-<a name='L257'></a><a href='#L257'>257</a>
-<a name='L258'></a><a href='#L258'>258</a>
-<a name='L259'></a><a href='#L259'>259</a>
-<a name='L260'></a><a href='#L260'>260</a>
-<a name='L261'></a><a href='#L261'>261</a>
-<a name='L262'></a><a href='#L262'>262</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L243'></a><a href='#L243'>243</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -457,12 +418,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -598,13 +560,15 @@
     /&gt;
     
     &lt;button @click="getMeal" &gt;Search&lt;/button&gt;
+    
+    
      
     &lt;br /&gt;
   &lt;/div&gt;
  
   &lt;br /&gt;
 &nbsp;
-  &lt;div&gt;
+  &lt;div v-if="meals!==null"&gt;
     &lt;div class="item" v-for="item in meals" v-bind:key="item.idMeal"&gt;
       &lt;div class="car-mar"&gt;
         &lt;div class="row blk"&gt;
@@ -654,10 +618,11 @@
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-                      &lt;iframe height="420" width="720" :src="'https://www.youtube.com/embed/' + this.youtubeVid"&gt;&lt;/iframe&gt;
-&nbsp;
+          &lt;div style="padding-right:40px " &gt;
+          &lt;iframe height="420" width="100%" :src="'https://www.youtube.com/embed/' + item.strYoutube.substring(32)"&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
           &lt;div class="row"&gt;
-            &lt;div class="col-sm-12"&gt;
+            &lt;div class="col-sm-12" style="padding:4px"&gt;
               &lt;div class="Mcard-body"&gt;
                 &lt;h5 class="Mcard-title"&gt;
                   &lt;b&gt;Recipe&lt;/b&gt;
@@ -670,37 +635,14 @@
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-&nbsp;
-      &lt;!-- &lt;table&gt;
-                  &lt;th style="text-align:center"&gt;&lt;img :src="item.strMealThumb" alt="Trulli" width="600" height="433" /&gt;&lt;/th&gt;
-                  &lt;h2 align="center"&gt;&lt;span style="font-weight:bold;"&gt;{{item.strMeal}}&lt;/span&gt;&lt;/h2&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;About&lt;/th&gt;
-                    &lt;th&gt;Recipe&lt;/th&gt;
-                    &lt;th&gt;Ingredients&lt;/th&gt;
-                &lt;/tr&gt;
-                &lt;tr&gt;
-                    &lt;td style="padding-top: 5px;border-top-width: 2px;"&gt;
-                        &lt;li&gt;Meal Id:{{item.idMeal}}&lt;/li&gt;
-                        &lt;li&gt;Name: {{item.strMeal}}&lt;/li&gt;
-                        &lt;li&gt;Category: {{item.strCategory}}&lt;/li&gt;
-                        &lt;li&gt;Location: {{item.strArea}}&lt;/li&gt;
-                    &lt;/td&gt;
-                    &lt;td&gt;&lt;li&gt;{{item.strInstructions}}&lt;/li&gt;&lt;/td&gt;
-                    &lt;td&gt; &lt;li&gt;{{item.strIngredient1}}, {{item.strMeasure1}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient2}}, {{item.strMeasure2}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient3}}, {{item.strMeasure3}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient4}}, {{item.strMeasure4}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient5}}, {{item.strMeasure5}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient6}}, {{item.strMeasure6}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient7}}, {{item.strMeasure7}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient8}}, {{item.strMeasure8}}&lt;/li&gt;
-                        &lt;li&gt;{{item.strIngredient9}}, {{item.strMeasure9}}&lt;/li&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/table&gt; --&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&nbsp;
+  &lt;div class="err" v-else&gt;
+    &lt;h1&gt;  Oops..!!! &lt;br/&gt;
+      Recipe is not available, try for New one 
+    &lt;/h1&gt;
+    &lt;/div&gt;
 &nbsp;
 &lt;/template&gt;
 &lt;script&gt;
@@ -714,14 +656,14 @@ export default <span class="fstat-no" title="function not covered" >{</span>
       loading: false,
       err: "",
       strMeal: "",
-      youtubeVid: "",
+      youtubeVid: [],
+      searchClick:1,
     };
   },
-  created() {
-<span class="cstat-no" title="statement not covered" >    this.g</span>etMeal();
-  },
+&nbsp;
   methods: <span class="fstat-no" title="function not covered" >{</span>
     getMeal() {
+<span class="cstat-no" title="statement not covered" >      this.s</span>earchClick--;
 <span class="cstat-no" title="statement not covered" >      this.l</span>oading = true;
 <span class="cstat-no" title="statement not covered" >      console.</span>log(this.strMeal);
       Axios.get(
@@ -729,9 +671,9 @@ export default <span class="fstat-no" title="function not covered" >{</span>
       )
         .then((response) =&gt; {
           console.log(response.data);
-          this.meals = response.data.meals;
-          this.youtubeVid = this.meals[0].strYoutube.substring(32);
+          this.meals = response.data.meals;  
           this.loading = false;
+&nbsp;
         })
         .catch((err) =&gt; {
           this.loading = false;
@@ -743,8 +685,7 @@ export default <span class="fstat-no" title="function not covered" >{</span>
 };
 &lt;/script&gt;
 &lt;style&gt;
-table,
-th,
+&nbsp;
 td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -844,6 +785,8 @@ li {
   color: black;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: left;
+}.err{
+  transition-delay: 5ms !important;
 }
 &lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>
@@ -853,7 +796,7 @@ li {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Apr 13 2022 00:48:34 GMT+0530 (India Standard Time)
+                at Wed Apr 13 2022 12:12:08 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

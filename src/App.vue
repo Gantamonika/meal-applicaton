@@ -1,5 +1,6 @@
 <template>
 
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
  
@@ -25,20 +26,23 @@
         <router-link :to="{path: '/RandomMeal'}" class="button-class navbar-brand">RandomMeal</router-link>
       </li>
     </ul>
-   
+    <img src="https://www.thelogomix.com/files/imagecache/v3-logo-detail/cookbook6-06.png" alt="CookBook" width="110" height="60">   
   </div>
 </nav>
     
     
 <router-view/>
 <Footer/>
+
 </template>
 
 <script>
 import Footer from './components/Footer.vue';
 
 export default {
-  components: { Footer },
+  components: {
+     Footer,
+   },
   name: "App",
  
 };
